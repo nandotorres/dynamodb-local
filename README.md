@@ -64,3 +64,16 @@ Don't miss to especify the parameter `--endpoint-url` to point to localhost on t
 }
 ```
 
+## Using with Java
+
+```
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+import com.amazonaws.regions.Regions;
+...
+// This client will default to US West (Oregon)
+AmazonDynamoDBClient client = new AmazonDynamoDBClient();
+
+// Modify the client so that it accesses a different region.
+client.withRegion(Regions.US_EAST_1);
+
+```
